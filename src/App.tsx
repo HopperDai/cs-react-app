@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import PureBasic from "./pages/redux/Pure";
 import ReactUse from "./pages/redux/ReactUse";
+import AsyncRedux from "./pages/redux/Async";
 
 export default function App() {
   return (
@@ -16,6 +17,9 @@ export default function App() {
           <li>
             <Link to="/redux/react">react-redux</Link>
           </li>
+          <li>
+            <Link to="/redux/async">async-redux</Link>
+          </li>
         </ul>
         <Switch>
           <Route exact path="/redux/pure">
@@ -23,6 +27,9 @@ export default function App() {
           </Route>
           <Route exact path="/redux/react">
             <ReactUse />
+          </Route>
+          <Route exact path="/redux/async">
+            <AsyncRedux />
           </Route>
         </Switch>
       </Router>

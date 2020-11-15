@@ -7,25 +7,25 @@ import axios from "axios";
 
 // async dispatch action
 export const fetchList = () => {
-  return (dispatch) => {
+  return (dispatch: any) => {
     dispatch({
       type: EXAMPLE_FEATCH_LIST_BEGIN
     });
 
     return new Promise(async (resolve, reject) => {
       try {
-        const { result }: any = await axios.get(
-          "https://api.apiopen.top/musicRankings"
+        const { data: result }: any = await axios.get(
+          "https://api.apiopen.top/musicRankings1"
         );
         dispatch({
           type: EXAMPLE_FEATCH_LIST_SUCCESS,
-          data: result
+          data: result.result
         });
-        resolve(result);
+        resolve(result.result);
       } catch (err) {
         dispatch({
           type: EXAMPLE_FEATCH_LIST_FAIL,
-          data: { error: err }
+          data: { error: JSON.stringify(err) }
         });
         reject(err);
       }

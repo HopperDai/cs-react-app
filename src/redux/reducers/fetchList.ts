@@ -4,7 +4,7 @@ import {
   EXAMPLE_FEATCH_LIST_FAIL
 } from "../constants";
 
-export const fetchListReducer = (state, action) => {
+export const fetchListReducer = (state: any, action: any) => {
   switch (action.type) {
     case EXAMPLE_FEATCH_LIST_BEGIN:
       return {
