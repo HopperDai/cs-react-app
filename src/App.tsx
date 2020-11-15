@@ -14,6 +14,7 @@ interface IAction {
 interface ITodoState {
   todos: any[];
 }
+
 const ADD_TODO = "ADD_TODO";
 const initialState: ITodoState = {
   todos: []
