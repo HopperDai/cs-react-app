@@ -15,7 +15,7 @@ export const fetchList = () => {
     return new Promise(async (resolve, reject) => {
       try {
         const { data: result }: any = await axios.get(
-          "https://api.apiopen.top/musicRankings1"
+          "https://api.apiopen.top/musicRankings"
         );
         dispatch({
           type: EXAMPLE_FEATCH_LIST_SUCCESS,
